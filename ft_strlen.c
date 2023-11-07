@@ -6,15 +6,15 @@
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:44:58 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/03 00:13:33 by mel-rhay         ###   ########.fr       */
+/*   Updated: 2023/11/06 23:32:45 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])

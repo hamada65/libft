@@ -6,7 +6,7 @@
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 00:04:37 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/03 02:51:52 by mel-rhay         ###   ########.fr       */
+/*   Updated: 2023/11/06 23:38:30 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,7 @@ int	ft_atoi(const char *nptr)
 
 // int	main(void)
 // {
-// 	const char *str = "\t\n\r\v\f  469 \n";
-// 	int num = ft_atoi(str);
-
-// 	printf("The integer value is: %d\n", num);
-
+// 	printf("ft_atoi : %i\n", ft_atoi("-5555555555555"));
+// 	printf("ft_atoi : %i\n", atoi("-5555555555555"));
 // 	return (0);
 // }

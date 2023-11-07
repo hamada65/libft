@@ -6,7 +6,7 @@
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 03:05:18 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/06 20:42:47 by mel-rhay         ###   ########.fr       */
+/*   Updated: 2023/11/06 23:32:50 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strdup(const char *s);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
-unsigned int		ft_strlcat(char *dst, const char *src, size_t size);
-int					ft_strlcpy(char *dst, const char *src, size_t size);
-int					ft_strlen(const char *s);
+size_t				ft_strlcat(char *dst, const char *src, size_t size);
+size_t				ft_strlcpy(char *dst, const char *src, size_t size);
+size_t				ft_strlen(const char *s);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strnstr(const char *big, const char *little,
 						size_t len);
@@ -68,5 +68,6 @@ void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+						void (*del)(void *));
 #endif
