@@ -6,7 +6,7 @@
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 23:05:13 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/04 02:21:04 by mel-rhay         ###   ########.fr       */
+/*   Updated: 2023/11/11 02:53:45 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,16 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
-	i = 0;
-	if (fd >= 0)
+	if (s && fd)
 	{
-		while (s[i])
+		i = 0;
+		if (fd >= 0)
 		{
-			ft_putchar_fd(s[i], fd);
-			i++;
+			while (s[i])
+			{
+				ft_putchar_fd(s[i], fd);
+				i++;
+			}
 		}
 	}
 }

@@ -11,21 +11,21 @@ RM = rm -f
 all: $(NAME)
 
 bonus: $(OBJSBONUS)
-	@$(AR) $(NAME) $(OBJSBONUS)
+	$(AR) $(NAME) $(OBJSBONUS)
 
 $(OBJSBONUS): $(SRCSBONUS)
-	@$(CC)  $(CFLAGS) -c $(SRCSBONUS)
+	$(CC)  $(CFLAGS) -c $(SRCSBONUS)
 
 $(NAME): $(OBJS)
-	@$(AR) $(NAME) $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
 $(OBJS): $(SRCS)
-	@$(CC)  $(CFLAGS) -c $(SRCS)
+	$(CC)  $(CFLAGS) -c $(SRCS)
 
 clean:
-	@$(RM) $(OBJS) $(OBJSBONUS)
+	$(RM) $(OBJS) $(OBJSBONUS)
 
 fclean: clean
-	@$(RM) $(NAME)
+	$(RM) $(NAME)
 
 re: fclean $(NAME)

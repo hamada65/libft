@@ -6,7 +6,7 @@
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 18:20:42 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/05 03:05:36 by mel-rhay         ###   ########.fr       */
+/*   Updated: 2023/11/11 02:48:01 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,6 @@ char	*ft_itoa(int n)
 
 // int main()
 // {
-// 	printf("nbr = %s\n", ft_itoa(-2147483648));
+// 	printf("nbr = %s\n", ft_itoa(NULL));
 // 	return (0);
 // }

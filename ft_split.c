@@ -6,7 +6,7 @@
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 16:34:07 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/07 00:11:02 by mel-rhay         ###   ########.fr       */
+/*   Updated: 2023/11/11 03:04:55 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,17 @@ char	**ft_split(char const *s, char c)
 	int		words_count;
 	char	**str;
 
+	if (!s)
+		return (NULL);
+	// else if (!c)
+	// {
+	// 	str = (char **)malloc(2 * sizeof(char *));
+	// 	if (!str)
+	// 		return (NULL);
+	// 	str[0] = ft_strdup(s);
+	// 	str[1] = '\0';
+	// 	return str;
+	// }
 	words_count = ft_words_count(s, c);
 	str = (char **)malloc((words_count + 1) * sizeof(char *));
 	if (!str)
@@ -79,16 +90,15 @@ char	**ft_split(char const *s, char c)
 	return (str);
 }
 
-// int main()
-// {
-//     char **ptr;
-//     ptr = ft_split("hello world test one", 'e');
-//     int i = 0;
-//     while (ptr[i])
-//     {
-//         printf("%s\n", ptr[i]);
-//         i++;
-//     }
-
-//     return (0);
-// }
+int main()
+{
+    char **ptr;
+    ptr = ft_split("FDSFSFSD", 'F');
+    int i = 0;
+    while (ptr[i])
+    {
+        printf("%s\n", ptr[i]);
+        i++;
+    }
+    return (0);
+}

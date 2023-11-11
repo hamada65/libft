@@ -6,7 +6,7 @@
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:47:49 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/04 00:32:43 by mel-rhay         ###   ########.fr       */
+/*   Updated: 2023/11/11 03:15:53 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	j;
 	char	*str;
 
+	if (!s1)
+		return (NULL);
+	else if (!set)
+		return ((char *)s1);
 	sindex = 0;
 	while (s1[sindex] && is_set(s1[sindex], set))
 	{

@@ -6,7 +6,7 @@
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 14:26:00 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/03 22:45:27 by mel-rhay         ###   ########.fr       */
+/*   Updated: 2023/11/11 01:55:28 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		l2;
 	char	*str;
 
+	if (!s1 || !s2)
+		return (NULL);
 	l1 = ft_strlen(s1);
 	l2 = ft_strlen(s2);
 	str = (char *)malloc((l1 + l2 + 1) * sizeof(char));
@@ -31,9 +33,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 // int main()
 // {
-//     char str1[] = "Hello, ";
-//     char str2[] = "World!";
-
-//     printf("str = %s\n", ft_strjoin(str1, str2));
+//     printf("str = %s\n", ft_strjoin(NULL, NULL));
 //     return (0);
 // }

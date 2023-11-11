@@ -6,7 +6,7 @@
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:31:57 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/05 03:06:03 by mel-rhay         ###   ########.fr       */
+/*   Updated: 2023/11/11 02:50:12 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*str;
 	unsigned int	i;
 
+	if (!s || !f)
+		return (NULL);
 	len = ft_strlen(s);
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!str)
