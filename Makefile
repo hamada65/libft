@@ -11,9 +11,9 @@ RM = rm -f
 all: $(NAME)
 
 bonus: $(OBJSBONUS)
-	$(AR) $(NAME) $(OBJSBONUS)
+	$(AR) $(NAME) $(OBJSBONUS) $(OBJS)
 
-$(OBJSBONUS): $(SRCSBONUS)
+$(OBJSBONUS): $(OBJS) $(SRCSBONUS)
 	$(CC)  $(CFLAGS) -c $(SRCSBONUS)
 
 $(NAME): $(OBJS)
