@@ -2,7 +2,7 @@ SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c f
 SRCSBONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 OBJS = ${SRCS:.c=.o}
 OBJSBONUS = ${SRCSBONUS:.c=.o}
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror # -Wall : unused variable , missing return statement , uninitialized variable ; -Wextra : unused function parametre , conversion between signed and unsigned type
 CC = cc
 AR = ar rc
 NAME = libft.a
@@ -12,22 +12,22 @@ RM = rm -f
 
 all: $(NAME)
 
-bonus: $(OBJSBONUS)
-    $(AR) $(NAME) $(OBJSBONUS)
+bonus: $(OBJSBONUS) $(OBJS)
 
-$(OBJSBONUS): %.o: %.c
-    $(CC) $(CFLAGS) -c $< -o $@
+$(OBJSBONUS): $(SRCSBONUS)
+	$(CC) $(CFLAGS) -c $(SRCSBONUS)
+	$(AR) $(NAME) $(OBJSBONUS)
 
 $(NAME): $(OBJS)
-    $(AR) $(NAME) $(OBJS)
 
-$(OBJS): %.o: %.c
-    $(CC) $(CFLAGS) -c $< -o $@
+$(OBJS): $(SRCS)
+	$(CC) $(CFLAGS) -c $(SRCS)
+	$(AR) $(NAME) $(OBJS)
 
 clean:
-    $(RM) $(OBJS) $(OBJSBONUS)
+	$(RM) $(OBJS) $(OBJSBONUS)
 
 fclean: clean
-    $(RM) $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
