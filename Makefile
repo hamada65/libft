@@ -8,7 +8,7 @@ AR = ar rc
 NAME = libft.a
 RM = rm -f
 
-.PHONY: all bonus clean fclean re
+.PHONY: all bonus clean fclean re # meaning they are not real files. It prevents conflicts with files that might have the same names as the targets.
 
 all: $(NAME)
 
