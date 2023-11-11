@@ -38,12 +38,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (str);
 }
 
-int main()
-{
-    // char str[] = "tripouille";
-    printf("str = %s\n", ft_substr(NULL, 0, 42000));
-    return (0);
-}
+// int main()
+// {
+//     // char str[] = "tripouille";
+//     printf("str = %s\n", ft_substr(NULL, 0, 42000));
+//     return (0);
+// }
 // char	*ft_substr(char const *s, unsigned int start, size_t len)
 // {
 // 	size_t	i;

@@ -39,14 +39,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return ((char *)s1);
 	sindex = 0;
 	while (s1[sindex] && is_set(s1[sindex], set))
-	{
 		sindex++;
-	}
 	eindex = ft_strlen(s1);
 	while (sindex < eindex && is_set(s1[eindex - 1], set))
-	{
 		eindex--;
-	}
 	str = (char *)malloc((eindex - sindex + 1) * sizeof(char));
 	if (!str)
 		return (NULL);

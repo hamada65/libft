@@ -3,7 +3,7 @@ SRCSBONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_ba
 OBJS    = ${SRCS:.c=.o}
 OBJSBONUS    = ${SRCSBONUS:.c=.o}
 CFLAGS = -Wall -Wextra -Werror
-CC = gcc
+CC = cc
 AR = ar rc
 NAME = libft.a
 RM = rm -f

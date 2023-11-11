@@ -39,6 +39,7 @@ char	*ft_split_malloc(const char *s, int j)
 	if (!ptr)
 		return (NULL);
 	ft_memcpy(ptr, s, j);
+	ptr[j] = '\0';
 	return (ptr);
 }
 
@@ -50,6 +51,21 @@ void	*ft_free_split(char **str, int i)
 	return (NULL);
 }
 
+const char	*skip(const char *s, char c, int flag, int *j)
+{
+	if (flag)
+	{
+		while (*s == c && *s)
+			s++;
+	}
+	else if (!flag)
+	{
+		while (s[*j] != c && s[*j])
+			(*j)++;
+	}
+	return (s);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		i;
@@ -59,15 +75,6 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	// else if (!c)
-	// {
-	// 	str = (char **)malloc(2 * sizeof(char *));
-	// 	if (!str)
-	// 		return (NULL);
-	// 	str[0] = ft_strdup(s);
-	// 	str[1] = '\0';
-	// 	return str;
-	// }
 	words_count = ft_words_count(s, c);
 	str = (char **)malloc((words_count + 1) * sizeof(char *));
 	if (!str)
@@ -75,30 +82,27 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	while (i < words_count)
 	{
-		while (*s == c && *s)
-			s++;
+		s = skip(s, c, 1, &j);
 		j = 0;
-		while (s[j] != c && s[j])
-			j++;
+		s = skip(s, c, 0, &j);
 		str[i] = ft_split_malloc(s, j);
-		if (!str[i])
-			return (ft_free_split(str, i));
-		str[i++][j] = '\0';
+		if (!str[i++])
+			return (ft_free_split(str, i - 1));
 		s += j;
 	}
 	str[i] = '\0';
 	return (str);
 }
 
-int main()
-{
-    char **ptr;
-    ptr = ft_split("FDSFSFSD", 'F');
-    int i = 0;
-    while (ptr[i])
-    {
-        printf("%s\n", ptr[i]);
-        i++;
-    }
-    return (0);
-}
+// int main()
+// {
+//     char **ptr;
+//     ptr = ft_split("FDSFSFSD", 'F');
+//     int i = 0;
+//     while (ptr[i])
+//     {
+//         printf("%s\n", ptr[i]);
+//         i++;
+//     }
+//     return (0);
+// }

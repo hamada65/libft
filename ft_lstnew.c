@@ -24,13 +24,13 @@ t_list	*ft_lstnew(void *content)
 	return (head);
 }
 
-int main()
-{
-    // int a = 42;
-    t_list *head = NULL;
+// int main()
+// {
+//     // int a = 42;
+//     t_list *head = NULL;
 
-    head = ft_lstnew(NULL);
+//     head = ft_lstnew(NULL);
 
-    printf("%ls\n", ((int *)head->content));
-    return (0);
-}
+//     printf("%ls\n", ((int *)head->content));
+//     return (0);
+// }
