@@ -16,13 +16,13 @@ bonus: $(OBJS) $(OBJSBONUS)
 
 $(OBJSBONUS): $(SRCSBONUS)
 	$(CC) $(CFLAGS) -c $(SRCSBONUS)
-	$(AR) $(NAME) $(OBJSBONUS)
+	$(AR) $(NAME) $(OBJSBONUS) $(OBJS)
 
 $(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
 $(OBJS): $(SRCS)
 	$(CC) $(CFLAGS) -c $(SRCS)
-	$(AR) $(NAME) $(OBJS)
 
 clean:
 	$(RM) $(OBJS) $(OBJSBONUS)
