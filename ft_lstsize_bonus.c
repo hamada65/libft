@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 03:55:42 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/06 21:26:06 by mel-rhay         ###   ########.fr       */
+/*   Created: 2023/11/06 01:10:11 by mel-rhay          #+#    #+#             */
+/*   Updated: 2023/11/06 01:20:12 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+int	ft_lstsize(t_list *lst)
 {
-	if (lst && del)
+	int	num;
+
+	num = 0;
+	while (lst)
 	{
-		del(lst->content);
-		free(lst);
+		lst = lst->next;
+		num++;
 	}
+	return (num);
 }
