@@ -6,7 +6,7 @@
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 21:34:08 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/12 03:49:19 by mel-rhay         ###   ########.fr       */
+/*   Updated: 2023/11/13 21:08:05 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int		i;
-	char	*source;
-	char	*destination;
+	size_t		i;
+	char		*source;
+	char		*destination;
 
 	source = (char *)src;
 	destination = (char *)dest;

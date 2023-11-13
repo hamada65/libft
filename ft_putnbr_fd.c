@@ -6,7 +6,7 @@
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 23:16:45 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/12 03:49:22 by mel-rhay         ###   ########.fr       */
+/*   Updated: 2023/11/13 21:05:55 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	long long int	nbr;
 
-	if (fd)
+	if (fd >= 0)
 	{
 		nbr = n;
 		if (nbr < 0)

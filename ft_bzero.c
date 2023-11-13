@@ -6,7 +6,7 @@
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 19:18:23 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/12 03:49:03 by mel-rhay         ###   ########.fr       */
+/*   Updated: 2023/11/13 21:08:47 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned long int	i;
-	char				*ptr;
+	size_t	i;
+	char	*ptr;
 
 	ptr = (char *)s;
 	i = 0;

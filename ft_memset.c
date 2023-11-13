@@ -6,7 +6,7 @@
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:47:54 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/12 03:49:20 by mel-rhay         ###   ########.fr       */
+/*   Updated: 2023/11/13 21:08:31 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	long unsigned int	i;
-	char				*ptr;
+	size_t	i;
+	char	*ptr;
 
 	ptr = (char *)s;
 	i = 0;

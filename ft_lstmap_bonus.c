@@ -6,11 +6,11 @@
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 20:42:08 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/12 03:49:13 by mel-rhay         ###   ########.fr       */
+/*   Updated: 2023/11/13 21:10:46 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
