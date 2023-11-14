@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	if (size && ((nmemb * size) >= (SIZE_MAX)))
+	if (size && ((nmemb) > (SIZE_MAX / size)))
 		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (!ptr)
@@ -24,12 +24,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }
-
-// int main()
-// {
-// 	// char *str;
-
-// 	// str = ft_calloc(0xfff, 0xfffffffffffffff);
-// 	printf("%d", 3 <= 40);
-// 	return (0);
-// }
