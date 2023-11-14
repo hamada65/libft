@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_int_lenght(int c)
+static int	ft_int_lenght(int c)
 {
 	int	i;
 
@@ -27,7 +27,7 @@ int	ft_int_lenght(int c)
 	return (i);
 }
 
-void	ft_itoa_putnumbers(int i, char *table, int n)
+static void	ft_itoa_putnumbers(int i, char *table, int n)
 {
 	table[i--] = '\0';
 	while (i >= 0 && table[i] != '-')
@@ -37,7 +37,7 @@ void	ft_itoa_putnumbers(int i, char *table, int n)
 	}
 }
 
-char	*ft_is_zero(void)
+static char	*ft_is_zero(void)
 {
 	char	*table;
 
@@ -49,7 +49,7 @@ char	*ft_is_zero(void)
 	return (table);
 }
 
-char	*ft_is_min_int(void)
+static char	*ft_is_min_int(void)
 {
 	char	*table;
 
