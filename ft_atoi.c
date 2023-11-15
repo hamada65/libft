@@ -6,43 +6,49 @@
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 00:04:37 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/12 03:49:02 by mel-rhay         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:32:15 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+static int	ft_atoi_check_llong(long long result, char *str, int sign)
 {
-	char	*str;
-	int		i;
-	int		sign;
-	int		result;
-
-	str = (char *)nptr;
-	i = 0;
-	result = 0;
-	sign = 1;
-	while (str[i] && (str[i] == ' ' || str[i] == '\f' || str[i] == '\n'
-			|| str[i] == '\r' || str[i] == '\t' || str[i] == '\v'))
-		i++;
-	if (str[i] && (str[i] == '+' || str[i] == '-'))
+	if ((result > LLONG_MAX / 10) || (result == LLONG_MAX / 10 && (*str
+				- '0') > LLONG_MAX % 10))
 	{
-		if (str[i] == '-')
-			sign = -sign;
-		i++;
+		if (sign == 1)
+			return (-1);
+		else if (sign == -1)
+			return (0);
 	}
-	while (str[i] && str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + (str[i] - 48);
-		i++;
-	}
-	return (result * sign);
+	return (2);
 }
 
-// int	main(void)
-// {
-// 	printf("The integer value is: %d\n", ftatoi(NULL));
+int	ft_atoi(const char *nptr)
+{
+	char		*str;
+	int			sign;
+	long long	result;
 
-// 	return (0);
-// }
+	str = (char *)nptr;
+	result = 0;
+	sign = 1;
+	while (*str && (*str == ' ' || *str == '\f' || *str == '\n' || *str == '\r'
+			|| *str == '\t' || *str == '\v'))
+		str++;
+	if (*str && (*str == '+' || *str == '-'))
+	{
+		if (*str == '-')
+			sign = -sign;
+		str++;
+	}
+	while (*str && *str >= '0' && *str <= '9')
+	{
+		if (ft_atoi_check_llong(result, str, sign) != 2)
+			return (ft_atoi_check_llong(result, str, sign));
+		result = result * 10 + (*str - '0');
+		str++;
+	}
+	return ((int)(result * sign));
+}

@@ -6,7 +6,7 @@
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 23:21:29 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/12 03:49:34 by mel-rhay         ###   ########.fr       */
+/*   Updated: 2023/11/15 21:55:00 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,28 +19,27 @@ char	*ft_strrchr(const char *s, int c)
 	ret = NULL;
 	while (*s)
 	{
-		if (*s == (unsigned char)c)
+		if (*s == (char)c)
 			ret = ((char *)s);
 		s++;
 	}
-	if (*s == (unsigned char)c)
+	if (*s == (char)c)
 		ret = ((char *)s);
 	return (ret);
 }
 
 // int main() {
-//     const char *str = "Hello, World!";
-//     int target = 'e'; // The character we want to find
+//     const char str[] = {'a','b',-1,'c','\0'} ;
+//     int target = -1; // The character we want to find
 
 //     // Use strrchr to search for the last 'o' in the string
-//     char *result = ft_strrchr(str, target);
+//     char *result = strrchr(str, target);
 
-//     if (result != NULL) {
-//         printf("Last character '%c' found at position: %ld\n", target, result
-// - str);
-//     } else {
-//         printf("Character '%c' not found in the string.\n", target);
-//     }
+//     // if (result != NULL) {
+//         printf("%s\n", result);
+//     // } else {
+//     //     printf("Character '%c' not found in the string.\n", target);
+//     // }
 
 //     return (0);
 // }
