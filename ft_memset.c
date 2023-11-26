@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 13:47:54 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/13 21:08:31 by mel-rhay         ###   ########.fr       */
+/*   Created: 2023/11/24 12:36:39 by mel-rhay          #+#    #+#             */
+/*   Updated: 2023/11/24 12:36:40 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-// int main() {
-//     int	*ptr;
-// 	ptr = malloc(10 * sizeof(int));
-// 	ft_memset(ptr, 42, 15);
-// 	int i = 0;
-// 	while (i < 15)
-// 	{
-// 		printf("%i\n", ptr[i]);
-// 		i++;
-// 	}
-//     return (0);
-// }

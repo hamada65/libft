@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 16:34:07 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/12 03:49:23 by mel-rhay         ###   ########.fr       */
+/*   Created: 2023/11/24 12:37:30 by mel-rhay          #+#    #+#             */
+/*   Updated: 2023/11/24 18:35:07 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,19 +90,6 @@ char	**ft_split(char const *s, char c)
 			return (ft_free_split(str, i - 1));
 		s += j;
 	}
-	str[i] = '\0';
+	str[i] = 0;
 	return (str);
 }
-
-// int main()
-// {
-//     char **ptr;
-//     ptr = ft_split("FDSFSFSD", 'F');
-//     int i = 0;
-//     while (ptr[i])
-//     {
-//         printf("%s\n", ptr[i]);
-//         i++;
-//     }
-//     return (0);
-// }

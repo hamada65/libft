@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 22:00:37 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/12 03:49:18 by mel-rhay         ###   ########.fr       */
+/*   Created: 2023/11/24 12:36:05 by mel-rhay          #+#    #+#             */
+/*   Updated: 2023/11/24 12:36:06 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-// int main()
-// {
-//     printf(" memcmp = %i\n", memcmp("hello", "helloa", 6));
-//     printf(" memcmp = %i\n", ft_memcmp("hello", "helloa", ));
-//     return (0);
-// }

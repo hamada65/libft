@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 18:20:42 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/12 03:49:08 by mel-rhay         ###   ########.fr       */
+/*   Created: 2023/11/24 12:34:17 by mel-rhay          #+#    #+#             */
+/*   Updated: 2023/11/24 12:55:07 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,9 +89,3 @@ char	*ft_itoa(int n)
 	}
 	return (table);
 }
-
-// int main()
-// {
-// 	printf("nbr = %s\n", ft_itoa(NULL));
-// 	return (0);
-// }

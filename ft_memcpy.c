@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 21:25:43 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/12 03:49:19 by mel-rhay         ###   ########.fr       */
+/*   Created: 2023/11/24 12:36:17 by mel-rhay          #+#    #+#             */
+/*   Updated: 2023/11/24 21:08:08 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// #include <string.h>
-
-// int main() {
-//     char source[] = "Hello, World!";
-//     char destination[20]; // Destination buffer
-
-//     // Copy the contents of the source string to the destination buffer
-//     size_t length = strlen(source) + 1; // Include the null terminator
-//     ft_memcpy(destination, source, 5);
-
-//     // Print the copied string
-//     printf("Source: %s\n", source);
-//     printf("Destination: %s\n", destination);
-
-//     return (0);
-// }

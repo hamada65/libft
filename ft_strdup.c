@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 00:35:24 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/12 03:49:25 by mel-rhay         ###   ########.fr       */
+/*   Created: 2023/11/24 12:37:52 by mel-rhay          #+#    #+#             */
+/*   Updated: 2023/11/24 12:37:53 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,3 @@ char	*ft_strdup(const char *s)
 	tab[i] = '\0';
 	return (tab);
 }
-
-// int main() {
-//     const char *originalString = "Hello, World!";
-
-//     // Duplicate the original string
-//     char *duplicateString = ft_strdup(originalString);
-
-//     if (duplicateString != NULL) {
-//         printf("Original String: %s\n", originalString);
-//         printf("Duplicated String: %s\n", duplicateString);
-//     } else {
-//         printf("Memory allocation failed.\n");
-//     }
-
-//     return (0);
-// }

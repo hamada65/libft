@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 18:43:31 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/13 21:10:48 by mel-rhay         ###   ########.fr       */
+/*   Created: 2023/11/24 12:35:42 by mel-rhay          #+#    #+#             */
+/*   Updated: 2023/11/24 20:21:29 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,3 @@ t_list	*ft_lstnew(void *content)
 	head->next = NULL;
 	return (head);
 }
-
-// int main()
-// {
-//     // int a = 42;
-//     t_list *head = NULL;
-
-//     head = ft_lstnew(NULL);
-
-//     printf("%ls\n", ((int *)head->content));
-//     return (0);
-// }

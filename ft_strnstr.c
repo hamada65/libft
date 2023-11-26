@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 23:45:24 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/12 03:49:33 by mel-rhay         ###   ########.fr       */
+/*   Created: 2023/11/24 12:39:29 by mel-rhay          #+#    #+#             */
+/*   Updated: 2023/11/24 18:58:12 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	unsigned long int	j;
 
 	i = 0;
+	if (!big && len == 0)
+		return (0);
 	if (ft_strlen(little) == 0)
 		return ((char *)big);
 	while (big[i] && i < len)
@@ -35,20 +37,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-// int main() {
-//     const char *haystack = "lorem ipsum dolor sit amet";
-//     const char *needle = "dolor";
-//     size_t len = 15;
-
-//     char *result = ft_strnstr(haystack, needle, len);
-
-//     if (result) {
-//         printf("Substring found at index %ld\n", result - haystack);
-//     } else {
-//         printf("Substring not found within the first %zu characters.\n",
-// len);
-//     }
-
-//     return (0);
-// }

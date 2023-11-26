@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 15:47:49 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/12 03:49:35 by mel-rhay         ###   ########.fr       */
+/*   Created: 2023/11/24 12:39:47 by mel-rhay          #+#    #+#             */
+/*   Updated: 2023/11/24 12:39:47 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[j] = '\0';
 	return (str);
 }
-
-// int main()
-// {
-// printf("str = %s\n", ft_strtrim("lorem \n ipsum \t dolor \n sit \t amet",
-// " "));
-// return(0);
-// }

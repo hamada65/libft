@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 19:18:23 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/13 21:08:47 by mel-rhay         ###   ########.fr       */
+/*   Created: 2023/11/24 12:31:38 by mel-rhay          #+#    #+#             */
+/*   Updated: 2023/11/24 12:32:19 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,22 +25,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
-// int main() {
-//     char buffer[10];
-
-//     // Initialize the buffer to non-zero values
-//     for (int i = 0; i < 10; i++) {
-//         buffer[i] = 'A';
-//     }
-
-//     // Use bzero to set the buffer to zero
-//     bzero(buffer, sizeof(buffer));
-
-//     // Check the contents of the buffer
-//     for (int i = 0; i < 10; i++) {
-//         printf("%c ", buffer[i]);
-//     }
-
-//     return (0);
-// }

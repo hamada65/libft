@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 00:04:37 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/15 16:32:15 by mel-rhay         ###   ########.fr       */
+/*   Created: 2023/11/24 12:30:56 by mel-rhay          #+#    #+#             */
+/*   Updated: 2023/11/24 21:23:44 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	ft_atoi_check_llong(long long result, char *str, int sign)
 {
-	if ((result > LLONG_MAX / 10) || (result == LLONG_MAX / 10 && (*str
-				- '0') > LLONG_MAX % 10))
+	if ((result > 922337203685477580) || (result == 922337203685477580 && (*str
+				- '0') > 7))
 	{
 		if (sign == 1)
 			return (-1);

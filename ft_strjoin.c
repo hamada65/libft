@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-rhay <mel-rhay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 14:26:00 by mel-rhay          #+#    #+#             */
-/*   Updated: 2023/11/12 03:49:28 by mel-rhay         ###   ########.fr       */
+/*   Created: 2023/11/24 12:38:16 by mel-rhay          #+#    #+#             */
+/*   Updated: 2023/11/24 12:38:17 by mel-rhay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[l1 + l2] = '\0';
 	return (str);
 }
-
-// int main()
-// {
-//     printf("str = %s\n", ft_strjoin(NULL, NULL));
-//     return (0);
-// }
